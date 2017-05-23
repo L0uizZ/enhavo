@@ -1,0 +1,75 @@
+project_project_index:
+    options:
+        expose: true
+    path: /project/project/index
+    methods: [GET]
+    defaults:
+        _controller: project.controller.project:indexAction
+        _sylius:
+            viewer:
+
+project_project_create:
+    options:
+        expose: true
+    path: /project/project/create
+    methods: [GET,POST]
+    defaults:
+        _controller: project.controller.project:createAction
+        _sylius:
+            viewer:
+
+project_project_update:
+    options:
+        expose: true
+    path: /project/project/update/{id}
+    methods: [GET,POST]
+    defaults:
+        _controller: project.controller.project:updateAction
+        _sylius:
+            viewer:
+
+project_project_table:
+    options:
+        expose: true
+    path: /project/project/table
+    methods: [GET]
+    defaults:
+        _controller: project.controller.project:tableAction
+        _sylius:
+            viewer:
+
+project_project_delete:
+    options:
+        expose: true
+    path: /project/project/delete/{id}
+    methods: [DELETE]
+    defaults:
+        _controller: project.controller.project:deleteAction
+
+project_project_batch:
+    options:
+        expose: true
+    path: /project/project/batch
+    methods: [POST]
+    defaults:
+        _controller: project.controller.project:batchAction
+        _sylius:
+            paginate: false
+            criteria:
+                id: $ids
+            batches:
+                delete:
+                    type: delete
+
+project_project_preview:
+    options:
+        expose: true
+    path: /project/project/preview
+    methods: [POST]
+    defaults:
+        _controller: project.controller.project:previewAction
+        _sylius:
+            viewer:
+
+#IF PROBLEMS OCCOURE
+# composer update enhavo/enhavo

@@ -1,0 +1,22 @@
+ProjectBundle\Entity\Project:
+    type: entity
+    table: null
+    repositoryClass: ProjectBundle\Repository\ProjectRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        author:
+            type: string
+            length: 255
+            nullable: true
+            column: Author
+        title:
+            type: string
+            length: 255
+            nullable: true
+            column: Title
+    lifecycleCallbacks: {  }

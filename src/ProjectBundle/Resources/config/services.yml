@@ -1,0 +1,5 @@
+services:
+    project.form.project:
+        class: ProjectBundle\Form\Type\ProjectType
+        tags:
+            - { name: form.type, alias: 'project_project' }
