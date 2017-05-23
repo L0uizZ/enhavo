@@ -2,7 +2,6 @@
 
 namespace ProjectBundle\Form\Type;
 
-use Enhavo\Bundle\GridBundle\Entity\Text;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;

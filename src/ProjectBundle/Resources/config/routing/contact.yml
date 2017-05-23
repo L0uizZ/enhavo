@@ -1,0 +1,75 @@
+project_contact_index:
+    options:
+        expose: true
+    path: /project/contact/index
+    methods: [GET]
+    defaults:
+        _controller: project.controller.contact:indexAction
+        _sylius:
+            viewer:
+
+project_contact_create:
+    options:
+        expose: true
+    path: /project/contact/create
+    methods: [GET,POST]
+    defaults:
+        _controller: project.controller.contact:createAction
+        _sylius:
+            viewer:
+
+project_contact_update:
+    options:
+        expose: true
+    path: /project/contact/update/{id}
+    methods: [GET,POST]
+    defaults:
+        _controller: project.controller.contact:updateAction
+        _sylius:
+            viewer:
+
+project_contact_table:
+    options:
+        expose: true
+    path: /project/contact/table
+    methods: [GET]
+    defaults:
+        _controller: project.controller.contact:tableAction
+        _sylius:
+            viewer:
+
+project_contact_delete:
+    options:
+        expose: true
+    path: /project/contact/delete/{id}
+    methods: [DELETE]
+    defaults:
+        _controller: project.controller.contact:deleteAction
+
+project_contact_batch:
+    options:
+        expose: true
+    path: /project/contact/batch
+    methods: [POST]
+    defaults:
+        _controller: project.controller.contact:batchAction
+        _sylius:
+            paginate: false
+            criteria:
+                id: $ids
+            batches:
+                delete:
+                    type: delete
+
+project_contact_preview:
+    options:
+        expose: true
+    path: /project/contact/preview
+    methods: [POST]
+    defaults:
+        _controller: project.controller.contact:previewAction
+        _sylius:
+            viewer:
+
+#IF PROBLEMS OCCOURE
+# composer update enhavo/enhavo

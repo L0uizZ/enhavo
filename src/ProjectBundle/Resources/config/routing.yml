@@ -5,3 +5,7 @@ project_default_index:
 project_project:
     prefix:     /admin
     resource: "@ProjectBundle/Resources/config/routing/project.yml"
+
+project_contact:
+    prefix:     /admin
+    resource: "@ProjectBundle/Resources/config/routing/contact.yml"

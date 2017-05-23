@@ -1,0 +1,27 @@
+ProjectBundle\Entity\Contact:
+    type: entity
+    table: null
+    repositoryClass: ProjectBundle\Repository\ProjectRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            length: 255
+            nullable: true
+            column: Name
+        email:
+            type: string
+            length: 255
+            nullable: true
+            column: Email
+        message:
+            type: string
+            length: 255
+            nullable: true
+            column: Message
+    lifecycleCallbacks: {  }

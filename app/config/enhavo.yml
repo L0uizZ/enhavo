@@ -93,3 +93,9 @@ sylius_resource:
                 controller: Enhavo\Bundle\AppBundle\Controller\ResourceController
                 form:
                     default: ProjectBundle\Form\Type\ProjectType
+        project.contact:
+                    classes:
+                        model: ProjectBundle\Entity\Contact
+                        controller: Enhavo\Bundle\AppBundle\Controller\ResourceController
+                        form:
+                            default: ProjectBundle\Form\Type\ContactType
