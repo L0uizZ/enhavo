@@ -7,7 +7,6 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\AbstractType;
 use ProjectBundle\Entity\Project;
-use ProjectBundle\Entity\MyResource;
 
 class ProjectType extends AbstractType
 {
@@ -17,7 +16,14 @@ class ProjectType extends AbstractType
         $builder->add('author', TextType::class, array('label' => 'Title'));
         $builder->add('file', 'enhavo_files', array('label' => 'File',
                                                     'translation_domain' => 'FileInterface',
-                                                    'multiple' => false));
+                                                    'information' => array(
+                                                    'Upload your Book here'),
+                                                    'multiple' => false,
+                                                    'fields' => array(
+                                                        'title' => array(
+                                                            'label' => 'media.form.label.title',
+                                                            'translationDomain' => 'FileInterface'
+                                                     ))));
     }
 
     public function configureOptions(OptionsResolver $resolver)

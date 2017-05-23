@@ -35,11 +35,16 @@ enhavo_app:
             type: translation
         project:
             type: base
-            label: Project
+            label: Books
             route: project_project_index
             role: ROLE_ENHAVO_PROJECT_PROJECT_INDEX
             icon: box
-
+        contact:
+            type: base
+            label: Contact
+            route: project_project_index
+            role: ROLE_ENHAVO_PROJECT_PROJECT_INDEX
+            icon: mail
 
 enhavo_grid:
     items:
@@ -64,6 +69,21 @@ enhavo_grid:
         video:
             type: video
 
+enhavo_contact:
+    forms:
+        contact:
+            model: ProjectBundle\Model\Contact
+            form: ProjectBundle\Form\Type\ContactType
+            template:
+                form: ProjectBundle:Contact:form.html.twig
+                recipient: ProjectBundle:Contact:recipient.html.twig
+                confirm: ProjectBundle:Contact:confirm.html.twig
+                page: ProjectBundle:Contact:page.html.twig
+            recipient: '%mailer_to%'
+            from: '%mailer_from%'
+            subject: Contact Form
+            translation_domain: ~
+            confirm_mail: true
 
 sylius_resource:
     resources:
