@@ -3,6 +3,7 @@
 namespace ProjectBundle\Entity;
 
 use Sylius\Component\Resource\Model\ResourceInterface;
+use Enhavo\Bundle\MediaBundle\Model\FileInterface;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -25,10 +26,10 @@ class Project implements ResourceInterface
      */
     private $title;
 
-    private $image;
-
-    private $tasks;
-
+    /**
+     * @var FileInterface
+     */
+    protected $file;
 
     /**
      * Get id
@@ -85,4 +86,25 @@ class Project implements ResourceInterface
     {
         return $this->title;
     }
+
+    /**
+     * Set file
+     *
+     * @param $file FileInterface|null
+     */
+    public function setFile(FileInterface $file = null)
+    {
+        $this->file = $file;
+    }
+
+    /**
+     * Get file
+     *
+     * @return FileInterface|null
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
 }

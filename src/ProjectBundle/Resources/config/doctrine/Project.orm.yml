@@ -20,3 +20,9 @@ ProjectBundle\Entity\Project:
             nullable: true
             column: Title
     lifecycleCallbacks: {  }
+
+    oneToOne:
+        file:
+            cascade: ['persist', 'refresh', 'remove']
+            targetEntity: Enhavo\Bundle\MediaBundle\Model\FileInterface
+            orphanRemoval: true
