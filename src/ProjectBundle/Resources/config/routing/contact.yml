@@ -31,7 +31,7 @@ project_contact_update:
 project_contact_table:
     options:
         expose: true
-    path: /project/contact/table
+    path: /project/contact/able
     methods: [GET]
     defaults:
         _controller: project.controller.contact:tableAction
@@ -60,6 +60,26 @@ project_contact_batch:
             batches:
                 delete:
                     type: delete
+                    label: Delete #table.batch.action.delete
+                    confirm_message: table.batch.message.confirm.delete
+                    translation_domain: EnhavoAppBundle
+                    permission: ROLE_ENHAVO_PAGE_PAGE_DELETE
+                    position: 0
+                publish:
+                    type: publish
+                    label: Publish #page.batch.action.publish
+                    confirm_message: page.batch.message.confirm.publish
+                    translation_domain: EnhavoPageBundle
+                    permission: ROLE_ENHAVO_PAGE_PAGE_PUBLISH
+                    position: 1
+                submit:
+                    type: publish
+                    label: Submit
+                    confirm_message: page.batch.message.confirm.publish
+                    translation_domain: EnhavoPageBundle
+                    permission: ROLE_ENHAVO_PAGE_PAGE_PUBLISH
+                    position: 2
+
 
 project_contact_preview:
     options:
@@ -70,6 +90,3 @@ project_contact_preview:
         _controller: project.controller.contact:previewAction
         _sylius:
             viewer:
-
-#IF PROBLEMS OCCOURE
-# composer update enhavo/enhavo

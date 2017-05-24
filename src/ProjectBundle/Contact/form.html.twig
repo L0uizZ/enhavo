@@ -1,6 +1,5 @@
 <form action="{{ path('enhavo_contact_submit', { type: 'contact' }) }}" id="contact_form" method="post">
-    {{ form_row(form.firstname) }}
-    {{ form_row(form.lastname) }}
+    {{ form_row(form.firstName) }}
     {{ form_row(form.email) }}
     {{ form(form.message) }}
     {{ form_row(form._token) }}

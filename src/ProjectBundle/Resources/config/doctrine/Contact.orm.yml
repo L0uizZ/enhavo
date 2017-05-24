@@ -1,7 +1,7 @@
 ProjectBundle\Entity\Contact:
     type: entity
     table: null
-    repositoryClass: ProjectBundle\Repository\ProjectRepository
+    repositoryClass: ProjectBundle\Repository\ContactRepository
     id:
         id:
             type: integer
@@ -9,19 +9,13 @@ ProjectBundle\Entity\Contact:
             generator:
                 strategy: AUTO
     fields:
-        firstName:
-            type: string
-            length: 255
-            nullable: true
-            column: Name
         email:
             type: string
             length: 255
-            nullable: true
-            column: Email
+        firstName:
+            type: string
+            length: 255
         message:
             type: string
             length: 255
-            nullable: true
-            column: Message
     lifecycleCallbacks: {  }

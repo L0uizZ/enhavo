@@ -12,18 +12,19 @@ class ProjectType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('title', TextType::class, array('label' => 'Author'));
-        $builder->add('author', TextType::class, array('label' => 'Title'));
+        $builder->add('author', TextType::class, array('label' => 'Author'));
+        $builder->add('title', TextType::class, array('label' => 'Title'));
         $builder->add('file', 'enhavo_files', array('label' => 'File',
                                                     'translation_domain' => 'FileInterface',
                                                     'information' => array(
-                                                    'Upload your Book here'),
+                                                    'You can upload your book here'),
                                                     'multiple' => false,
                                                     'fields' => array(
                                                         'title' => array(
                                                             'label' => 'media.form.label.title',
                                                             'translationDomain' => 'FileInterface'
                                                      ))));
+        $builder->getForm();
     }
 
     public function configureOptions(OptionsResolver $resolver)
