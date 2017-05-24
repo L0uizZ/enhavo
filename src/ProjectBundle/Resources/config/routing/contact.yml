@@ -72,13 +72,13 @@ project_contact_batch:
                     translation_domain: EnhavoPageBundle
                     permission: ROLE_ENHAVO_PAGE_PAGE_PUBLISH
                     position: 1
-                submit:
-                    type: publish
-                    label: Submit
-                    confirm_message: page.batch.message.confirm.publish
-                    translation_domain: EnhavoPageBundle
-                    permission: ROLE_ENHAVO_PAGE_PAGE_PUBLISH
-                    position: 2
+                #submit:
+                #    type: publish
+                #    label: Submit
+                #    confirm_message: page.batch.message.confirm.publish
+                #    translation_domain: EnhavoPageBundle
+                #    permission: ROLE_ENHAVO_PAGE_PAGE_PUBLISH
+                #    position: 2
 
 
 project_contact_preview:

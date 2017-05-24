@@ -4,7 +4,6 @@ namespace ProjctBundle\Batch;
 
 use Enhavo\Bundle\AppBundle\Batch\AbstractBatch;
 
-
 class SubmitBatch extends AbstractBatch
 {
     /**
